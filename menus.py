@@ -8,7 +8,18 @@ def menuPrincipal() -> int:
     print(menu)
     while (hasError == True):
         try: 
-            hasError = False
+            return int(input(":)"))
+        except ValueError:
+            print("Error en el dato de ingreso")
+            os.system("pause")
+            hasError = True
+def menuNotas() -> int:
+    os.system("cls")
+    global hasError
+    hasError = True
+    print(subMenuNotas)
+    while (hasError == True):
+        try: 
             return int(input(":)"))
         except ValueError:
             print("Error en el dato de ingreso")
